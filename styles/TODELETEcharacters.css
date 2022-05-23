@@ -1,0 +1,191 @@
+
+body {
+  background: black;
+  padding-left: 300px;
+
+}
+
+h1{
+
+  color: white;
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 250px;
+}
+
+.allcards {
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding-top: 15px;
+}
+
+.card {
+  width: 270px;
+  height: 470px;
+  transform: translate(-50%, -50%);
+  border-radius: 16px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
+  transition: 0.5s;
+}
+
+.card:hover img {
+  opacity: 0.4;
+  transition: .5s;
+}
+
+.card:hover button {
+  color: black;
+  background-color: white;
+  font-weight: 750;
+  display: inline-block;
+  padding: 10px 30px;
+  /* color: white; */
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.3s;
+  letter-spacing: 4px;
+}
+
+button {
+  color: white;
+  background-color: transparent;
+  font-weight: 500;
+  display: inline-block;
+  padding: 10px 30px;
+  /* color: white; */
+  border: 1.5px solid white;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  cursor: pointer;
+
+}
+
+.img {
+  display: flex;
+  height:100%;
+  width:100%;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: #000;
+  transition: .5s;
+}
+
+.img:hover  {
+  transform: translateY(-10px);
+  transition: all .95s;
+}
+
+.img-anne {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("../images/anne2.jpg") ;
+}
+
+.img-anne:hover  {
+  background-image: url("../images/anne2.jpg") ;
+}
+
+.img-alexandra {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("../images/alexandra2.jpg") ;
+}
+
+.img-alexandra:hover  {
+  background-image: url("../images/alexandra2.jpg") ;
+}
+
+.img-chatalere {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("../images/chatalere2.jpg") ;
+}
+
+.img-chatalere:hover  {
+  background-image: url("../images/chatalere2.jpg") ;
+}
+
+.img-claude {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("../images/claude2.jpg") ;
+}
+
+.img-claude:hover  {
+  background-image: url("../images/claude2.jpg") ;
+}
+
+.img-emilie {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("../images/emilie2.jpg") ;
+}
+
+.img-emilie:hover  {
+  background-image: url("../images/emilie2.jpg") ;
+}
+
+.img-manon {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("../images/manon2.jpg") ;
+}
+
+.img-manon:hover  {
+  background-image: url("../images/manon2.jpg") ;
+}
+
+.img-marina {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("../images/marina2.jpg") ;
+}
+
+.img-marina:hover  {
+  background-image: url("../images/marina2.jpg") ;
+}
+
+.img-orchidee {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("../images/orchidee2.jpg") ;
+}
+
+.img-orchidee:hover  {
+  background-image: url("../images/orchidee2.jpg") ;
+}
+
+.img-sarah {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("../images/sarah2.jpg") ;
+}
+
+.img-sarah:hover  {
+  background-image: url("../images/sarah2.jpg") ;
+}
+
+.img-soraya {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("../images/soraya2.jpg") ;
+}
+
+.img-soraya:hover  {
+  background-image: url("../images/soraya2.jpg") ;
+}
+
+.img-valerie {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("../images/valerie2.jpg") ;
+}
+
+.img-valerie:hover  {
+  background-image: url("../images/valerie2.jpg") ;
+}
+
+.img-victoire {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("../images/victoire2.jpg") ;
+}
+
+.img-victoire:hover  {
+  background-image: url("../images/victoire2.jpg") ;
+}
+
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/game.css">
+  </head>
+
+    <!-- PAGE 1: PLAYERS' CHARACTER SELECTION -->
+
+  <section id="character-selection">
+
+    <h1 id="players-order-title">PLAYER 1: Choose your character</h1>
+    <div class = "allcards">
+      <div class = "card">
+
+        <div class="img img-alexandra">
+            <button class="alert-button" id="1" data-name="Alexandra" data-image="img-alexandra"
+          onclick="alert('You choose Alexandra');">CHOOSE</button>
+        </div>
+      </div>
+
+      <div class = "card">
+        <div class="img img-anne">
+            <button class="alert-button" id="2" data-name="Anne" data-image="img-anne"
+          onclick="alert('You choose Anne');">CHOOSE</button>
+        </div>
+      </div>
+
+      <div class = "card">
+        <div class="img img-chatalere">
+            <button class="alert-button" id="3" data-name="Chatalere" data-image="img-chatalere"
+          onclick="alert('You choose Chataléré');">CHOOSE</button>
+        </div>
+      </div>
+
+      <div class = "card">
+        <div class="img img-claude">
+            <button class="alert-button" id="4" data-name="Claude" data-image="img-claude"
+          onclick="alert('You choose Claude');">CHOOSE</button>
+        </div>
+      </div>
+
+      <div class = "card">
+        <div class="img img-emilie">
+            <button class="alert-button" id="5" data-name="Emilie" data-image="img-emilie"
+          onclick="alert('You choose Emilie');">CHOOSE</button>
+        </div>
+      </div>
+
+      <div class = "card">
+        <div class="img img-manon">
+            <button class="alert-button" id="6" data-name="Manon" data-image="img-manon"
+          onclick="alert('You choose Manon');">CHOOSE</button>
+        </div>
+      </div>
+
+      <div class = "card">
+        <div class="img img-marina">
+            <button class="alert-button" id="7" data-name="Marina" data-image="img-marina"
+          onclick="alert('You choose Marina');">CHOOSE</button>
+        </div>
+      </div>
+
+      <div class = "card">
+        <div class="img img-orchidee">
+            <button class="alert-button" id="8" data-name="Orchidée" data-image="img-orchidee"
+          onclick="alert('You choose Orchidée');">CHOOSE</button>
+        </div>
+      </div>
+
+      <div class = "card">
+        <div class="img img-sarah">
+            <button class="alert-button" id="9" data-name="Sarah" data-image="img-sarah"
+          onclick="alert('You choose Sarah');">CHOOSE</button>
+        </div>
+      </div>
+
+      <div class = "card">
+        <div class="img img-soraya">
+            <button class="alert-button" id="10" data-name="Soraya" data-image="img-soraya"
+          onclick="alert('You choose Soraya');">CHOOSE</button>
+        </div>
+      </div>
+
+      <div class = "card">
+        <div class="img img-valerie">
+            <button class="alert-button" id="11" data-name="Valérie" data-image="img-valerie"
+          onclick="alert('You choose Valérie');">CHOOSE</button>
+        </div>
+      </div>
+
+      <div class = "card">
+        <div class="img img-victoire">
+            <button class="alert-button" id="12" data-name="Victoire" data-image="img-victoire"
+          onclick="alert('You choose Victoire');">CHOOSE</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 2: GAME -->
+
+  <section id="game-start" >
+
+    <body>
+
+      <h2>Who's gonna marry Marc?</h2>
+
+      <div class="wrapper-player1">
+        <div class="column-player1">
+            <div id="dice-side-1-player1" class="dice">0</div>
+            <div id="dice-side-2-player1" class="dice">0</div>
+        </div>
+        <div class="column-player1">
+            <button type="button" class="dice-roll-player1">roll dice</button>
+            <h2 id="status-player1"></h2>
+        </div>
+      </div>
+
+      <div class="wrapper-player2">
+        <div class="column-player2">
+            <div id="dice-side-1-player2" class="dice">0</div>
+            <div id="dice-side-2-player2" class="dice">0</div>
+        </div>
+        <div class="column">
+            <button type="button" class="dice-roll-player2">roll dice</button>
+            <h2 id="status-player2"></h2>
+        </div>
+      </div>
+
+      <div class="grid"></div>
+      <script src="./game.js"></script>
+
+    </body>
+
+  </section>
+
+</html>
