@@ -31,7 +31,7 @@ for (let i = 0; i < chooseButtons.length ; i++){
   if (!player1.isReady){
     player1.name = chooseButtons[i].dataset.name;
     player1.image = chooseButtons[i].dataset.image;
-    chooseButtons[i].style.background = "red";
+    chooseButtons[i].style.background = "#fe7171";
     chooseButtons[i].style.color = "white";
     chooseButtons[i].innerHTML = "PLAYER 1"
     title.innerHTML = "PLAYER 2: Choose your character"
@@ -40,7 +40,7 @@ for (let i = 0; i < chooseButtons.length ; i++){
   else if (!player2.isReady){
     player2.name = chooseButtons[i].dataset.name;
     player2.image = chooseButtons[i].dataset.image;
-    chooseButtons[i].style.background = "red";
+    chooseButtons[i].style.background = "#d90707d3";
     chooseButtons[i].style.color = "white";
     chooseButtons[i].innerHTML = "PLAYER 2";
     player2.isReady = true
@@ -135,17 +135,49 @@ class Player {
     this.isReady = false;
   }
 
-  rollDice(){
+  // rollDice(){
 
-    const buttonRoolDice = document.querySelector( '.dice-roll ' );
+  //   const buttonRoolDice = document.querySelector( '.dice-roll ' );
+  //   //this.name
+  //   // dans la même fonction les 2 jours, juste des selectors différents
+
+  //   buttonRoolDice.addEventListener( 'click', () => {
+
+  //     const diceSide1 = document.getElementById( 'dice-side-1' );
+  //     const diceSide2 = document.getElementById( 'dice-side-2' );
+  //     const status = document.getElementById( 'status' );
+
+  //     const side1 = Math.floor( Math.random() * 6 ) + 1;
+  //     const side2 = Math.floor( Math.random() * 6 ) + 1;
+  //     const diceTotal = side1 + side2;
+
+  //     diceSide1.innerHTML = side1;
+  //     diceSide2.innerHTML = side2;
+
+  //     status.innerHTML = `${this.name}` + ' ' + "rolled" + ' ' + diceTotal + '.';
+
+  //     if ( side1 === side2 ) {
+  //       status.innerHTML += ` Doubles! ${this.name} gets a free turn!`;
+  //     }
+
+  //     this.position += diceTotal % grid.length
+
+  //   }
+  //   , false );
+
+  // }
+
+  rollDicePlayer1(){
+
+    const buttonRoolDice = document.querySelector( '.dice-roll-player1' );
     //this.name
     // dans la même fonction les 2 jours, juste des selectors différents
 
     buttonRoolDice.addEventListener( 'click', () => {
 
-      const diceSide1 = document.getElementById( 'dice-side-1' );
-      const diceSide2 = document.getElementById( 'dice-side-2' );
-      const status = document.getElementById( 'status' );
+      const diceSide1 = document.getElementById( 'dice-side-1-player1' );
+      const diceSide2 = document.getElementById( 'dice-side-2-player1' );
+      const status = document.getElementById( 'status-player1' );
 
       const side1 = Math.floor( Math.random() * 6 ) + 1;
       const side2 = Math.floor( Math.random() * 6 ) + 1;
@@ -154,13 +186,45 @@ class Player {
       diceSide1.innerHTML = side1;
       diceSide2.innerHTML = side2;
 
-      status.innerHTML = `${this.name}` + ' ' + "rolled" + ' ' + diceTotal + '.';
+      status.innerHTML = `${player1.name}` + ' ' + "rolled" + ' ' + diceTotal + '.';
 
       if ( side1 === side2 ) {
-        status.innerHTML += ` Doubles! ${this.name} gets a free turn!`;
+        status.innerHTML += ` Doubles! ${player1.name} gets a free turn!`;
       }
 
-      this.position += diceTotal % grid.length
+      player1.position += diceTotal % grid.length
+
+    }
+    , false );
+
+  }
+
+  rollDicePlayer2(){
+
+    const buttonRoolDice = document.querySelector( '.dice-roll-player2' );
+    //this.name
+    // dans la même fonction les 2 jours, juste des selectors différents
+
+    buttonRoolDice.addEventListener( 'click', () => {
+
+      const diceSide1 = document.getElementById( 'dice-side-1-player2' );
+      const diceSide2 = document.getElementById( 'dice-side-2-player2' );
+      const status = document.getElementById( 'status-player1' );
+
+      const side1 = Math.floor( Math.random() * 6 ) + 1;
+      const side2 = Math.floor( Math.random() * 6 ) + 1;
+      const diceTotal = side1 + side2;
+
+      diceSide1.innerHTML = side1;
+      diceSide2.innerHTML = side2;
+
+      status.innerHTML = `${player2.name}` + ' ' + "rolled" + ' ' + diceTotal + '.';
+
+      if ( side1 === side2 ) {
+        status.innerHTML += ` Doubles! ${player2.name} gets a free turn!`;
+      }
+
+      player2.position += diceTotal % grid.length
 
     }
     , false );
@@ -271,8 +335,8 @@ let player1 = new Player();
 let player2 = new Player();
 
 player1.show()
-player1.rollDice()
-player2.rollDice()
+player1.rollDicePlayer1()
+player2.rollDicePlayer2()
 
 
 // je définis les boutons au début avant la class player
