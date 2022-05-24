@@ -18,8 +18,11 @@
 //Section 2(board game) is hidden
 const section1 = document.getElementById("character-selection")
 const section2 = document.getElementById("game-start")
+const modal = document.getElementById('myBtnModal')
 
 section2.classList.add('hidden')
+modal.classList.add('hidden');
+
 
 //Player1 choose his character
 
@@ -59,8 +62,12 @@ for (let i = 0; i < chooseButtons.length ; i++){
     // after player2 chooses, we can start the game with player1
     grid.currentPlayer = player1
 
+
   });
 }
+
+// document.getElementsByClassName('cell player1').classList.add(player1.image)
+// document.getElementsByClassName('cell player2').innerHTML = `${player2.image}`
 
 // <-------------> PLAYERS' CHARACTER SELECTION <------------->
 
@@ -130,15 +137,29 @@ const grid = {
 
     grid.cells[size - 194].classList.add('heart');
 
+    grid.cells[size - 131].classList.add('heart');
+
+    grid.cells[size - 49].classList.add('group');
+
     grid.cells[size - 69].classList.add('group');
 
     grid.cells[size - 88].classList.add('group');
 
     grid.cells[size - 124].classList.add('group');
 
+    grid.cells[size - 220].classList.add('group');
+
+    grid.cells[size - 169].classList.add('group');
+
     grid.cells[size - 150].classList.add('magic');
 
     grid.cells[size - 99].classList.add('magic');
+
+    grid.cells[size - 11].classList.add('magic');
+
+    grid.cells[size - 106].classList.add('magic');
+
+    grid.cells[size - 156].classList.add('magic');
 
     grid.cells[size - 4].classList.add('magic');
 
@@ -147,6 +168,14 @@ const grid = {
     grid.cells[size - 110].classList.add('interro');
 
     grid.cells[size - 14].classList.add('interro');
+
+    grid.cells[size - 25].classList.add('interro');
+
+    grid.cells[size - 39].classList.add('interro');
+
+    grid.cells[size - 185].classList.add('interro');
+
+    grid.cells[size - 175].classList.add('interro');
 
 
   },
@@ -262,22 +291,30 @@ class Player {
       case 'right':
         this.moveRight()
         this.win()
+        this.group()
         this.heart()
+        this.magic()
         break
       case 'left':
         this.moveLeft()
         this.win()
+        this.group()
         this.heart()
+        this.magic()
         break
       case 'down':
         this.moveDown()
         this.win()
+        this.group()
         this.heart()
+        this.magic()
         break
       case 'up':
         this.moveUp()
         this.win()
+        this.group()
         this.heart()
+        this.magic()
         break
     }
     // now show the new one
@@ -312,7 +349,7 @@ class Player {
   heart(){
     const size = grid.height * grid.width
     const currentPlayerCell = grid.cells[this.cellIndex]
-    if (currentPlayerCell === grid.cells[size - 23]){
+    if (currentPlayerCell === grid.cells[size - 23] & currentPlayerCell === grid.cells[size - 131]){
       document.getElementById('status').innerHTML = `${this.name}`+" gagne 2 déplacements"
       this.steps +=2
     }
@@ -327,6 +364,144 @@ class Player {
     if (currentPlayerCell === grid.cells[size -194]){
       document.getElementById('status').innerHTML = `${this.name}`+" gagne 3 déplacements"
       this.steps +=1
+    }
+  }
+
+
+  group(){
+    const size = grid.height * grid.width
+    const currentPlayerCell = grid.cells[this.cellIndex]
+    if (currentPlayerCell === grid.cells[size - 69]){
+
+      grid.cells[size - 69].appendChild(modal)
+      modal.classList.remove('hidden')
+      modal.onclick = function() {
+        document.getElementById("myModal").style.display = "block";
+      }
+      window.onclick = function(event) {
+        if (event.target == document.getElementById("myModal")) {
+          document.getElementById("myModal").style.display = "none";
+        }
+      }
+    }
+
+    if (currentPlayerCell === grid.cells[size - 49]){
+      grid.cells[size - 49].appendChild(modal)
+      modal.classList.remove('hidden')
+      modal.onclick = function() {
+        document.getElementById("myModal1").style.display = "block";
+      }
+      window.onclick = function(event) {
+        if (event.target == document.getElementById("myModal1")) {
+          document.getElementById("myModal1").style.display = "none";
+        }
+      }
+    }
+
+    if (currentPlayerCell === grid.cells[size - 88]){
+      grid.cells[size - 88].appendChild(modal)
+      modal.classList.remove('hidden')
+      modal.onclick = function() {
+        document.getElementById("myModal2").style.display = "block";
+      }
+      window.onclick = function(event) {
+        if (event.target == document.getElementById("myModal2")) {
+          document.getElementById("myModal2").style.display = "none";
+        }
+      }
+    }
+
+    if (currentPlayerCell === grid.cells[size - 124]){
+      grid.cells[size - 124].appendChild(modal)
+      modal.classList.remove('hidden')
+      modal.onclick = function() {
+        document.getElementById("myModal3").style.display = "block";
+      }
+      window.onclick = function(event) {
+        if (event.target == document.getElementById("myModal3")) {
+          document.getElementById("myModal3").style.display = "none";
+        }
+      }
+    }
+
+    if (currentPlayerCell === grid.cells[size - 220]){
+      grid.cells[size - 220].appendChild(modal)
+      modal.classList.remove('hidden')
+      modal.onclick = function() {
+        document.getElementById("myModal4").style.display = "block";
+      }
+      window.onclick = function(event) {
+        if (event.target == document.getElementById("myModal4")) {
+          document.getElementById("myModal4").style.display = "none";
+        }
+      }
+    }
+
+    if (currentPlayerCell === grid.cells[size - 169]){
+      grid.cells[size - 169].appendChild(modal)
+      modal.classList.remove('hidden')
+      modal.onclick = function() {
+        document.getElementById("myModal5").style.display = "block";
+      }
+      window.onclick = function(event) {
+        if (event.target == document.getElementById("myModal5")) {
+          document.getElementById("myModal5").style.display = "none";
+        }
+      }
+    }
+
+
+  }
+
+  interro(){
+    const size = grid.height * grid.width
+    const currentPlayerCell = grid.cells[this.cellIndex]
+    if (currentPlayerCell === grid.cells[size - 77]){
+      document.getElementById('status').innerHTML = `${this.name}`+" wins 2 moves"
+      this.steps +=2
+    }
+    if (currentPlayerCell === grid.cells[size - 110]){
+      document.getElementById('status').innerHTML = `${this.name}`+" must move back of 5 cells"
+      this.steps +=5
+    }
+    if (currentPlayerCell === grid.cells[size -14]){
+      document.getElementById('status').innerHTML = `${this.name}`+" must move back of 2 cells"
+      this.steps +=2
+    }
+  }
+
+  magic(){
+    const size = grid.height * grid.width
+    const currentPlayerCell = grid.cells[this.cellIndex]
+
+    if (currentPlayerCell === grid.cells[size - 4]){
+      document.getElementById('status').innerHTML = `${this.name}`+", victory is waiting for you!"
+      this.position = grid.cells[size - 8]
+    }
+
+    if (currentPlayerCell === grid.cells[size - 99]){
+      document.getElementById('status').innerHTML = `${this.name}`+ " back to start"
+      this.position = grid.cells[size - 224]
+    }
+
+    if (currentPlayerCell === grid.cells[size - 150]){
+      document.getElementById('status').innerHTML = `${this.name}`+ " back to start"
+      this.position = grid.cells[size - 224]
+    }
+
+    if (currentPlayerCell === grid.cells[size - 11]){
+      document.getElementById('status').innerHTML = `${this.name}`+ " back to start"
+      this.position = grid.cells[size - 224]
+    }
+
+    if (currentPlayerCell === grid.cells[size - 106]){
+      document.getElementById('status').innerHTML = `${this.name}`+ " back to start"
+      this.position = grid.cells[size - 224]
+    }
+
+    if (currentPlayerCell === grid.cells[size - 156]){
+      document.getElementById('status').innerHTML = `${this.name}`+", victory is waiting for you!"
+      this.position = grid.cells[size - 7]
     }
 
   }

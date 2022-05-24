@@ -316,7 +316,6 @@ h2 {
 
 .cell {
   border: 1px solid red;
-  color: white;
   width: 110px;
   height: 80px;
   background-size: contain;
@@ -378,15 +377,19 @@ h2 {
 .player1 {
   background-color: #fe7171;
   background-size: 20%;
-  display: flex;
-  justify-content: flex-end;
+  border-radius: 50%;
+  color: transparent;
+  position: relative;
+
 }
 
 .player2 {
   background-color: #d90707d3;
+  color: transparent;
   background-size: 20%;
   display: flex;
   justify-content: flex-start;
+
 }
 
 /* <-------------> PLAYERS <-------------> */
@@ -410,4 +413,80 @@ h2 {
   justify-content: center;
   margin: 10%;
   width: 1100px
+}
+
+#myBtnModal {
+
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: black;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%; /* Could be more or less, depending on screen size */
+}
+
+.img-anne2 {
+  background-image: url("../images/anne2small.jpg") ;
+}
+
+.img-alexandra2 {
+  background-image: url("../images/alexandra2small.jpg") ;
+}
+
+.img-chatalere2 {
+  background-image: url("../images/chatalere2small.jpg") ;
+}
+
+.img-claude2 {
+  background-image: url("../images/claude2small.jpg") ;
+}
+
+.img-emilie2 {
+  background-image: url("../images/emilie2small.jpg") ;
+}
+
+.img-manon2 {
+  background-image: url("../images/manon2small.jpg") ;
+}
+
+.img-marina2 {
+  background-image: url("../images/marina2small.jpg") ;
+}
+
+.img-orchidee2 {
+  background-image: url("../images/orchidee2small.jpg") ;
+}
+
+.img-sarah2 {
+  background-image: url("../images/sarah2small.jpg") ;
+}
+
+.img-soraya2 {
+  background-image: url("../images/soraya2small.jpg") ;
+}
+
+.img-valerie2 {
+  background-image: url("../images/valerie2small.jpg") ;
+}
+
+.img-victoire2 {
+  background-image: url("../images/victoire2small.jpg") ;
 }
