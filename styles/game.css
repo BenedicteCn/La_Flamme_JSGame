@@ -214,9 +214,7 @@ button {
   background-image: url("../images/victoire2.jpg") ;
 }
 
-.hidden {
-  display: none;
-}
+
 
 
 /* END SECTION 1 */
@@ -243,18 +241,7 @@ h2 {
 
 /* <-------------> DICES <-------------> */
 
-.wrapper-player1 {
-  padding-top: 10px;
-  width: 400px;
-  height: 130px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  border: 1px ;
-  border-color: white;
-}
-
-.wrapper-player2 {
+.wrapper {
   padding-top: 10px;
   width: 400px;
   height: 130px;
@@ -263,32 +250,13 @@ h2 {
   justify-content: space-between;
 }
 
-.column-player1 {
+.column {
   display: flex;
   align-items: center;
 }
 
-.column-player2 {
-  display: flex;
-  align-items: center;
-}
 
-#status-player1 {
-  position: absolute;
-  bottom: 54rem;
-  left: 50%;
-  transform: translateX(-50%);
-  min-width: 600px;
-  margin: 0;
-  font-size: 30px;
-  font-weight: 290;
-  text-align: center;
-  color: white;
-  font-family: "Roboto", sans-serif;
-
-}
-
-#status-player2 {
+#status {
   position: absolute;
   bottom: 54rem;
   left: 50%;
@@ -303,9 +271,9 @@ h2 {
 
 }
 
-.dice-player1 {
+.die {
+  font-family: "Roboto", sans-serif;
   width: 32px;
-  background-color: #fe7171;
   color: white;
   box-shadow: inset 0 0 0 rgba(251,81,81,0.4), 0 0 1.5em rgba(251,81,81,0.6);;
   border: 1px solid white;
@@ -314,46 +282,11 @@ h2 {
   text-align: center;
   margin: 5px;
   border-radius: 5px;
-  font-family: "Roboto", sans-serif;
-
-}
-
-.dice-player2 {
-  width: 32px;
-  color: white;
-  background-color: #d90707d3;
-  float: left;
-  border: 1px solid white;
-  box-shadow: inset 0 0 0 rgba(251,81,81,0.4), 0 0 1.5em rgba(251,81,81,0.6);
-  padding: 10px;
-  font-size: 22px;
-  text-align: center;
-  margin: 5px;
-  border-radius: 5px;
-  font-family: "Roboto", sans-serif;
-
-
-}
-
-.dice-roll-player1 {
-  cursor: pointer;
-  text-transform: capitalize;
-
-}
-
-.dice-roll-player2 {
-  cursor: pointer;
-  text-transform: capitalize;
-}
-
-.dice-roll-player1:hover {
   background-color: #fe7171;
-	box-shadow: inset 0 0 0 rgba(251,81,81,0.4), 0 0 1.5em rgba(251,81,81,0.6);
-  letter-spacing: 4px;
-	}
+}
 
-.dice-roll-player2:hover {
-  background-color: #d90707d3 ;
+.dice-roll:hover {
+  background-color: #fe7171;
 	box-shadow: inset 0 0 0 rgba(251,81,81,0.4), 0 0 1.5em rgba(251,81,81,0.6);
   letter-spacing: 4px;
 	}
@@ -377,18 +310,64 @@ h2 {
   display: flex;
   justify-content: center;
   height: 800px;
-  width: 950px;
+  width: 1650px;
   flex-wrap: wrap;
 }
 
 .cell {
   border: 1px solid red;
   color: white;
-  width: 95px;
+  width: 110px;
   height: 80px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.cell.winner {
+
+  background-image: url("../images/marcwinner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 445px;
+  height: 290px;
+
+}
+
+.cell.interro {
+
+  background-image: url("../images/interrogation.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 110px;
+  height: 80px;
+}
+
+.cell.heart {
+
+  background-image: url("../images/heart.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 110px;
+  height: 80px;
+}
+
+.cell.magic {
+
+  background-image: url("../images/magic.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 110px;
+  height: 80px;
+}
+
+.cell.group {
+
+  background-image: url("../images/grouppanda.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 110px;
+  height: 80px;
 }
 
 /* <-------------> GRID <-------------> */
@@ -398,13 +377,37 @@ h2 {
 
 .player1 {
   background-color: #fe7171;
+  background-size: 20%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .player2 {
   background-color: #d90707d3;
+  background-size: 20%;
+  display: flex;
+  justify-content: flex-start;
 }
 
 /* <-------------> PLAYERS <-------------> */
 
 
 /* END SECTION 2 */
+
+.hidden {
+  display: none;
+}
+
+.finalDisplay {
+
+  background-color: black;
+  color: white;
+  text-shadow: #000;
+  font-size: 56px;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10%;
+  width: 1100px
+}
