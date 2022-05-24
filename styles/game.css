@@ -318,6 +318,7 @@ h2 {
   border: 1px solid red;
   width: 110px;
   height: 80px;
+  color: transparent;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -376,7 +377,7 @@ h2 {
 
 .player1 {
   background-color: #fe7171;
-  background-size: 20%;
+  background-size: 100%;
   border-radius: 50%;
   color: transparent;
   position: relative;
@@ -386,7 +387,8 @@ h2 {
 .player2 {
   background-color: #d90707d3;
   color: transparent;
-  background-size: 20%;
+  background-size: 100%;
+  border-radius: 50%;
   display: flex;
   justify-content: flex-start;
 
