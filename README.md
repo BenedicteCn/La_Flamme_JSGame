@@ -1,14 +1,8 @@
-# LAB | HTML & CSS - Recipes Clone
+# LA FLAMME | Projet 1: Game - Bénédicte Coulon
 
 ## Introduction
 
-We have only learned the very basics today with HTML and CSS, so what the heck we can really build, right? Wrong, we can build some cool stuff already, and we are going to do just that.
-
-We all have to eat (at least, we should), so let's make some handy recipe pages. We are going to be recreating an Apple Pie recipe. As an extra step, we prepared French Onion Soup recipe as well.
-
-Cloning something that already exists is the best way to get better at frontend development, so check out the deliverable below to see what we are expecting.
-
-Some starter code is already provided, so you can jump right into it.
+La Flamme Game is based on the french TV show "La Flamme".
 
 ## Requirements
 

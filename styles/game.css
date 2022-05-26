@@ -1,6 +1,10 @@
 *{
+ box-sizing: border-box;
+}
+body {
+  background-image: url("../images/octavian-rosca-UfCYo7zHyY8-unsplash.jpg");
+  background-repeat: no-repeat;
 
-  background-color: black;
 }
 
 /* SECTION 1 */
@@ -16,7 +20,6 @@
 
 
 #character-selection {
-  background: black;
   margin: 3%;
 }
 
@@ -32,8 +35,8 @@
 
 .buttonStartGame:hover {
 
-  color: black;
-  background-color: white;
+  color: white;
+  font-weight: 650;
   letter-spacing: 4px;
 }
 
@@ -60,9 +63,8 @@
 }
 
 .card:hover button {
-  color: black;
-  background-color: white;
-  font-weight: 600;
+  color: white;
+  font-weight: 650;
   display: inline-block;
   padding: 10px 30px;
   /* color: white; */
@@ -71,17 +73,16 @@
   text-transform: uppercase;
   text-decoration: none;
   transition: 0.3s;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
 }
 
 button {
   color: white;
-  background-color: transparent;
   font-weight: 500;
   display: inline-block;
   padding: 10px 30px;
   /* color: white; */
-  border: 1.5px solid white;
+  border: 2px solid white;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   text-transform: uppercase;
@@ -225,7 +226,6 @@ button {
 
 #game-start {
   box-sizing: border-box;
-  background-color: black;
 }
 
 body {
@@ -242,7 +242,8 @@ h2 {
 /* <-------------> DICES <-------------> */
 
 .wrapper {
-  padding-top: 10px;
+  padding-bottom: 70px;
+  padding-top: 60px;
   width: 400px;
   height: 130px;
   margin: 0 auto;
@@ -258,7 +259,7 @@ h2 {
 
 #status {
   position: absolute;
-  bottom: 54rem;
+  bottom: 60rem;
   left: 50%;
   transform: translateX(-50%);
   min-width: 600px;
@@ -268,6 +269,7 @@ h2 {
   text-align: center;
   color: white;
   font-family: "Roboto", sans-serif;
+  background-color: transparent;
 
 }
 
@@ -275,20 +277,18 @@ h2 {
   font-family: "Roboto", sans-serif;
   width: 32px;
   color: white;
-  box-shadow: inset 0 0 0 rgba(251,81,81,0.4), 0 0 1.5em rgba(251,81,81,0.6);;
-  border: 1px solid white;
+  box-shadow: inset 0 0 0 rgba(251,81,81,0.4), 0 0 2.5em rgba(251,81,81,0.6);;
+  border: 2px solid white;
   padding: 10px;
   font-size: 22px;
   text-align: center;
   margin: 5px;
-  border-radius: 5px;
+  border-radius: 6px;
   background-color: #fe7171;
 }
 
 .dice-roll:hover {
-  background-color: #fe7171;
-	box-shadow: inset 0 0 0 rgba(251,81,81,0.4), 0 0 1.5em rgba(251,81,81,0.6);
-  letter-spacing: 4px;
+	box-shadow: inset 0 0 0 rgba(251,81,81,0.4), 0 0 2.5em rgba(251,81,81,0.6);
 	}
 
   h3{
@@ -306,22 +306,24 @@ h2 {
 /* <-------------> GRID <-------------> */
 
 .grid {
-  padding-top: 100px;
+  /* padding-top: 100px;
   display: flex;
   justify-content: center;
   height: 800px;
   width: 1650px;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
+
+  display: grid;
+  grid-template-columns: repeat(15,1fr);
+  grid-template-rows: repeat(15,minmax(60px, 1fr));
+
 }
 
 .cell {
-  border: 1px solid red;
-  width: 110px;
-  height: 80px;
+  border: solid 1px rgba(246, 203, 203, 0.5);
+  /* width: 110px;
+  height: 80px; */
   color: transparent;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .cell.winner {
@@ -329,8 +331,12 @@ h2 {
   background-image: url("../images/marcwinner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 445px;
-  height: 290px;
+  /* grid-row: 14/ span 2;
+  grid-column: 14 / span 2; */
+  /*permet d'aggrandir la photo de marc*/
+
+  /* width: 445px;
+  height: 290px; */
 
 }
 
@@ -339,8 +345,8 @@ h2 {
   background-image: url("../images/interrogation.png");
   background-repeat: no-repeat;
   background-size: contain;
-  width: 110px;
-  height: 80px;
+  /* width: 110px;
+  height: 80px; */
 }
 
 .cell.heart {
@@ -348,8 +354,8 @@ h2 {
   background-image: url("../images/heart.png");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 110px;
-  height: 80px;
+  /* width: 110px;
+  height: 80px; */
 }
 
 .cell.magic {
@@ -357,8 +363,15 @@ h2 {
   background-image: url("../images/magic.png");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 110px;
-  height: 80px;
+  /* width: 110px;
+  height: 80px; */
+}
+
+.cell.start {
+
+  background-image: url("../images/start.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .cell.group {
@@ -366,9 +379,16 @@ h2 {
   background-image: url("../images/grouppanda.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 110px;
+  /* width: 110px;
   height: 80px;
+  */
 }
+
+.cell.quizz {
+
+  background-color: white;
+}
+
 
 /* <-------------> GRID <-------------> */
 
@@ -379,18 +399,15 @@ h2 {
   background-color: #fe7171;
   background-size: 100%;
   border-radius: 50%;
-  color: transparent;
   position: relative;
 
 }
 
 .player2 {
   background-color: #d90707d3;
-  color: transparent;
   background-size: 100%;
   border-radius: 50%;
-  display: flex;
-  justify-content: flex-start;
+
 
 }
 
@@ -405,7 +422,6 @@ h2 {
 
 .finalDisplay {
 
-  background-color: black;
   color: white;
   text-shadow: #000;
   font-size: 56px;
@@ -421,6 +437,10 @@ h2 {
 
   font-weight: 500;
   font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  text-align: center;
+  cursor: pointer;
 }
 
 .modal {
@@ -447,48 +467,98 @@ h2 {
 
 .img-anne2 {
   background-image: url("../images/anne2small.jpg") ;
+  background-repeat: no-repeat;
 }
 
 .img-alexandra2 {
   background-image: url("../images/alexandra2small.jpg") ;
+  background-repeat: no-repeat;
 }
 
 .img-chatalere2 {
   background-image: url("../images/chatalere2small.jpg") ;
+  background-repeat: no-repeat;
 }
 
 .img-claude2 {
   background-image: url("../images/claude2small.jpg") ;
+  background-repeat: no-repeat;
 }
 
 .img-emilie2 {
   background-image: url("../images/emilie2small.jpg") ;
+  background-repeat: no-repeat;
 }
 
 .img-manon2 {
   background-image: url("../images/manon2small.jpg") ;
+  background-repeat: no-repeat;
 }
 
 .img-marina2 {
   background-image: url("../images/marina2small.jpg") ;
+  background-repeat: no-repeat;
 }
 
 .img-orchidee2 {
   background-image: url("../images/orchidee2small.jpg") ;
+  background-repeat: no-repeat;
 }
 
 .img-sarah2 {
   background-image: url("../images/sarah2small.jpg") ;
+  background-repeat: no-repeat;
+
 }
 
 .img-soraya2 {
   background-image: url("../images/soraya2small.jpg") ;
+  background-repeat: no-repeat;
+
 }
 
 .img-valerie2 {
   background-image: url("../images/valerie2small.jpg") ;
+  background-repeat: no-repeat;
+
 }
 
 .img-victoire2 {
   background-image: url("../images/victoire2small.jpg") ;
+  background-repeat: no-repeat;
+
 }
+
+#a_text:hover {
+
+  border-color: pink;
+  color: pink;
+}
+
+#b_text:hover {
+
+  border-color: pink;
+  color: pink;
+}
+
+#c_text:hover {
+
+  border-color: pink;
+  color: pink;
+
+}
+
+#d_text:hover {
+
+border-color: pink;
+color: pink;
+}
+
+#empty {
+
+  color: white;
+  font-size: 26px;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+
+  ;}

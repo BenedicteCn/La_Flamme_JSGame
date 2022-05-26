@@ -8,6 +8,13 @@
 
     <!-- PAGE 1: PLAYERS' CHARACTER SELECTION -->
 
+  <figure>
+    <audio controls autoplay>
+      <source src="musiquecompetition.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+  </figure>
+
   <section id="character-selection">
 
       <h1 id="players-order-title">PLAYER 1: Choose your character</h1>
@@ -136,7 +143,7 @@
       </div>
 
             <!-- Trigger/Open The Modal -->
-      <button id="myBtnModal">CLICK ME!</button>
+      <div id="myBtnModal">CLICK ME</div>
 
       <!-- The Modal -->
       <div id="myModal" class="modal">
@@ -212,7 +219,42 @@
         </div>
 
       </div>
+<!-- The Modal -->
+  <div id="myModalQuizz" class="modal">
 
+    <!-- Modal content -->
+    <div class="modal-content">
+
+      <div class="quiz-container" id="quiz">
+        <div class="quiz-header">
+          <h3 id="quiz-question">Which animal saved Soraya's life by allowing her to receive a heart transplant?</h3>
+          <ul id="answers-buttons">
+            <li>
+              <button id="button-a" data-option="a">A dog</button>
+            </li>
+
+            <li>
+              <button id="button-b" data-option="b">A monkey</button>
+            </li>
+
+            <li>
+              <button id="button-c" data-option="c">A fish</button>
+            </li>
+
+            <li>
+              <button id="button-d" data-option="d">A pig</button>
+            </li>
+          </ul>
+          <button id="close-question">Close</button>
+          <div id="empty"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+      <script src="./questions.js"></script>
+      <script src="./player.js"></script>
       <script src="./game.js"></script>
 
     </body>
