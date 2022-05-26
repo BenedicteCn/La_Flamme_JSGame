@@ -1,11 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 
+
 body {
 
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
   line-height: 1.5;
   font-weight: lighter;
+  background-image: url("../images/group_picture.jpeg");
   background-color: black;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 a{
@@ -21,6 +27,8 @@ ol {
 main {
   padding-left: 5%;
   padding-right: 5%;
+  display: flex;
+  justify-content: center;
 }
 
 #video {
@@ -32,10 +40,7 @@ main {
 
 .title {
 
-  background-image: url("../images/group_picture.jpeg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 100%;
+
   padding-top: 1rem;
   padding-bottom: 1rem;
 
@@ -254,4 +259,9 @@ h1 {
 .btn-three:hover::after {
   opacity: 0;
   transform: scale(0.1,1);
+}
+
+p {
+  color: white;
+  font-size: 14px;
 }
