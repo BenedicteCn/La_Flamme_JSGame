@@ -1,0 +1,54 @@
+body {
+
+  background-image: url("../images/octavian-rosca-UfCYo7zHyY8-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  margin: 3%;
+
+
+}
+
+img {
+
+  width: 6%;
+  height: auto;
+}
+
+button {
+  color: white;
+  font-weight: 500;
+  display: inline-block;
+  padding: 10px 30px;
+  /* color: white; */
+  border: 2px solid white;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  cursor: pointer;
+  border-radius: 3px;
+  background-color: transparent;
+
+}
+
+button:hover {
+
+  letter-spacing: 4px ;
+  font-weight: 600
+;}
+
+h2 {
+  color: white;
+  font-size: 42px;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  bottom: 20px;
+}
+
+h2 {
+  color: white;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+}

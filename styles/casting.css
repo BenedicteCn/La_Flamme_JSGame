@@ -17,6 +17,20 @@
   box-sizing: border-box;
 }
 
+#back{
+
+  border: 2px;
+  border-color: white;
+  color: white;
+}
+
+#back:hover{
+
+  letter-spacing: 2px ;
+  background-color: white;
+  color: black;
+}
+
 /* body */
 body {
   min-height: 100vh;

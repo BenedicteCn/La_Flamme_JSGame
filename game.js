@@ -144,7 +144,7 @@ const grid = {
 
     grid.cells[size - 88].classList.add("group");
 
-    grid.cells[size - 124].classList.add("group");
+    grid.cells[size - 122].classList.add("group");
 
     grid.cells[size - 220].classList.add("group");
 
@@ -175,6 +175,8 @@ const grid = {
     grid.cells[186].classList.add("interro");
 
     grid.cells[82].classList.add("interro");
+
+    grid.cells[144].classList.add("interro");
 
     grid.cells[size - 225].classList.add("start");
 

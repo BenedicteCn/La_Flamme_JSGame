@@ -323,6 +323,16 @@ class Player {
         return questions[0];
       case 40:
         return questions[1];
+      case 108:
+        return questions[2];
+      case 200:
+        return questions[3];
+      case 186:
+        return questions[4];
+      case 82:
+        return questions[5];
+      case 144:
+        return questions[6];
       default:
         return null;
     }
