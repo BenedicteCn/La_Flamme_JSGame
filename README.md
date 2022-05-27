@@ -8,7 +8,7 @@ La Flamme Game is a simple board game with 2 players. To win, the player must go
 
 ## Requirements
 
-- Go to: http://
+- Go to: https://benedictecn.github.io/La_Flamme_JSGame/
 - Click on "Rules" to display the rules of the game
 - Click on "Casting" to discover the contestants that will fight for Marc
 - Click on "Play" to start playing
