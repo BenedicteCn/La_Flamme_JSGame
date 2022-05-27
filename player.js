@@ -150,7 +150,7 @@ class Player {
       ).innerHTML = `Congrats to the winner ${this.name}!!`;
       console.log(`${this.steps}`);
       document.querySelector(".wrapper").innerHTML =
-        '<img src="../images/marcparty.gif" width="200px" height="250px">';
+        '<img src="./images/marcparty.gif" width="200px" height="250px">';
     }
   }
   givesLove() {
