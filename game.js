@@ -32,8 +32,8 @@ for (let i = 0; i < chooseButtons.length; i++) {
     if (!player1.isReady) {
       player1.name = chooseButtons[i].dataset.name;
       player1.image = chooseButtons[i].dataset.image;
-      chooseButtons[i].style.background = "#fe7171";
-      chooseButtons[i].style.color = "white";
+      chooseButtons[i].style.background = "white";
+      chooseButtons[i].style.color = "black";
       chooseButtons[i].innerHTML = "PLAYER 1";
       title.innerHTML = "PLAYER 2: Choose your character";
       player1.isReady = true;
@@ -41,8 +41,8 @@ for (let i = 0; i < chooseButtons.length; i++) {
       player2.name = chooseButtons[i].dataset.name;
       player2.image = chooseButtons[i].dataset.image;
 
-      chooseButtons[i].style.background = "#d90707d3";
-      chooseButtons[i].style.color = "white";
+      chooseButtons[i].style.background = "white";
+      chooseButtons[i].style.color = "black";
       chooseButtons[i].innerHTML = "PLAYER 2";
       player2.isReady = true;
 
@@ -55,17 +55,15 @@ for (let i = 0; i < chooseButtons.length; i++) {
       });
       const insertedNode = section1.insertBefore(startbutton, title);
       title.innerHTML = "";
-      const status = document.getElementById( 'status' );
-      grid.isStarted = true
-      status.innerHTML = `${player1.name}` + ': ' + "Roll the die!";
+      const status = document.getElementById("status");
+      grid.isStarted = true;
+      status.innerHTML = `${player1.name}` + ": " + "Roll the die!";
     }
 
     // after player2 chooses, we can start the game with player1
     grid.currentPlayer = player1;
   });
 }
-
-
 
 // document.getElementsByClassName('cell player1').classList.add(player1.image)
 // document.getElementsByClassName('cell player2').innerHTML = `${player2.image}`
@@ -128,15 +126,15 @@ const grid = {
 
     grid.cells[224].classList.add("winner");
 
-    grid.cells[size - 23].classList.add("heart");
+    grid.cells[113].classList.add("heart");
 
-    grid.cells[size - 59].classList.add("heart");
+    grid.cells[31].classList.add("heart");
 
-    grid.cells[size - 202].classList.add("heart");
+    grid.cells[165].classList.add("heart");
 
-    grid.cells[size - 194].classList.add("heart");
+    grid.cells[22].classList.add("heart");
 
-    grid.cells[size - 131].classList.add("heart");
+    grid.cells[94].classList.add("heart");
 
     grid.cells[size - 49].classList.add("group");
 
@@ -144,7 +142,7 @@ const grid = {
 
     grid.cells[size - 88].classList.add("group");
 
-    grid.cells[size - 122].classList.add("group");
+    grid.cells[size - 124].classList.add("group");
 
     grid.cells[size - 220].classList.add("group");
 
@@ -179,8 +177,6 @@ const grid = {
     grid.cells[144].classList.add("interro");
 
     grid.cells[size - 225].classList.add("start");
-
-
   },
   currentPlayer: null,
 };
@@ -195,15 +191,14 @@ const dice = document.querySelectorAll(".die");
 const statusElement = document.getElementById("status");
 const buttonRoolDice = document.querySelector(".dice-roll");
 
-
 document.addEventListener("keydown", (event) => {
   if (!grid.isStarted) {
-    return
+    return;
   }
   if (!grid.currentPlayer) {
-    throw new Error('KEYDOWN WITHOUT PLAYER')
+    throw new Error("KEYDOWN WITHOUT PLAYER");
   }
-  console.log('keydown', grid.currentPlayer)
+  console.log("keydown", grid.currentPlayer);
 
   if (grid.currentPlayer.isFinishedTurn) {
     if (grid.currentPlayer === player1) {
@@ -212,7 +207,7 @@ document.addEventListener("keydown", (event) => {
       grid.currentPlayer = player1;
     }
     // start a new turn
-    grid.currentPlayer.isFinishedTurn = false
+    grid.currentPlayer.isFinishedTurn = false;
   }
 
   if (grid.currentPlayer.steps === 0) {
@@ -220,7 +215,9 @@ document.addEventListener("keydown", (event) => {
   }
 
   let player = grid.currentPlayer;
-  console.log(`before move: I am ${player.name} and I have ${player.steps} steps remaining`)
+  console.log(
+    `before move: I am ${player.name} and I have ${player.steps} steps remaining`
+  );
 
   switch (event.code) {
     case "ArrowLeft":
@@ -228,7 +225,7 @@ document.addEventListener("keydown", (event) => {
       break;
     case "ArrowRight":
       player.move("right");
-      break
+      break;
     case "ArrowDown":
       player.move("down");
       break;
@@ -237,11 +234,12 @@ document.addEventListener("keydown", (event) => {
       break;
   }
 
-
   // player = grid.currentPlayer;
   // const status = document.getElementById( 'status' );
   // status.innerHTML = "She has"`${this.steps}` + " steps remaining"
-  console.log(`after move: I am ${player.name} and I have ${player.steps} steps remaining`)
+  console.log(
+    `after move: I am ${player.name} and I have ${player.steps} steps remaining`
+  );
 });
 
 // <-------------> PLAYERS <------------->
@@ -249,7 +247,7 @@ document.addEventListener("keydown", (event) => {
 const player1 = new Player("player1");
 const player2 = new Player("player2");
 
-setupQuestionModalEventListeners()
+setupQuestionModalEventListeners();
 player1.show();
 player2.show();
 
@@ -263,5 +261,4 @@ buttonRoolDice.addEventListener("click", () => {
 player1.win();
 player2.win();
 
-
-      // status.innerHTML = `${player2.name}` + ': ' + "it is your turn.";
+// status.innerHTML = `${player2.name}` + ': ' + "it is your turn.";
