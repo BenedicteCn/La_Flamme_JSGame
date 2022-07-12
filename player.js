@@ -12,13 +12,12 @@ class Player {
   setAvailableSteps(steps) {
     this.steps = steps;
     if (this.steps === 0) {
-      this.isFinishedTurn = true
-    }
-    else {
+      this.isFinishedTurn = true;
+    } else {
       this.isFinishedTurn = false;
     }
-    const status = document.getElementById( 'status' );
-    status.textContent = `${this.name} has ${this.steps} steps`
+    const status = document.getElementById("status");
+    status.textContent = `${this.name} has ${this.steps} steps`;
   }
   addAdditionalSteps(steps) {
     this.setAvailableSteps(this.steps + steps);
@@ -101,15 +100,19 @@ class Player {
     switch (direction) {
       case "right":
         this.moveRight();
+        document.getElementById("message").innerHTML = "";
         break;
       case "left":
         this.moveLeft();
+        document.getElementById("message").innerHTML = "";
         break;
       case "down":
         this.moveDown();
+        document.getElementById("message").innerHTML = "";
         break;
       case "up":
         this.moveUp();
+        document.getElementById("message").innerHTML = "";
         break;
     }
     this.win();
@@ -157,26 +160,26 @@ class Player {
     const size = grid.height * grid.width;
     const currentPlayerCell = grid.cells[this.cellIndex];
     if (
-      currentPlayerCell === grid.cells[size - 23] ||
-      currentPlayerCell === grid.cells[size - 131]
+      currentPlayerCell === grid.cells[113] ||
+      currentPlayerCell === grid.cells[31]
     ) {
-      document.getElementById("status").innerHTML =
-        `${this.name}` + " wins 2 moves";
+      document.getElementById("message").innerHTML =
+        `${this.name}` + " wins 2 moves!";
       this.addAdditionalSteps(2);
     }
-    if (currentPlayerCell === grid.cells[size - 59]) {
-      document.getElementById("status").innerHTML =
-        `${this.name}` + " wins 1 move";
+    if (currentPlayerCell === grid.cells[165]) {
+      document.getElementById("message").innerHTML =
+        `${this.name}` + " wins 1 move!";
       this.addAdditionalSteps(1);
     }
-    if (currentPlayerCell === grid.cells[size - 202]) {
-      document.getElementById("status").innerHTML =
-        `${this.name}` + " wins 2 moves";
+    if (currentPlayerCell === grid.cells[22]) {
+      document.getElementById("message").innerHTML =
+        `${this.name}` + " wins 2 moves!";
       this.addAdditionalSteps(2);
     }
-    if (currentPlayerCell === grid.cells[size - 194]) {
-      document.getElementById("status").innerHTML =
-        `${this.name}` + " wins 3 moves";
+    if (currentPlayerCell === grid.cells[94]) {
+      document.getElementById("message").innerHTML =
+        `${this.name}` + " wins 3 moves!";
       this.addAdditionalSteps(3);
     }
   }
@@ -186,6 +189,7 @@ class Player {
     if (currentPlayerCell === grid.cells[size - 69]) {
       grid.cells[size - 69].appendChild(modal);
       modal.classList.remove("hidden");
+      document.getElementById("message").innerHTML = "Click to see a video!";
       modal.onclick = function () {
         document.getElementById("myModal").style.display = "block";
       };
@@ -199,6 +203,7 @@ class Player {
     if (currentPlayerCell === grid.cells[size - 49]) {
       grid.cells[size - 49].appendChild(modal);
       modal.classList.remove("hidden");
+      document.getElementById("message").innerHTML = "Click to see a video!";
       modal.onclick = function () {
         document.getElementById("myModal1").style.display = "block";
       };
@@ -212,6 +217,7 @@ class Player {
     if (currentPlayerCell === grid.cells[size - 88]) {
       grid.cells[size - 88].appendChild(modal);
       modal.classList.remove("hidden");
+      document.getElementById("message").innerHTML = "Click to see a video!";
       modal.onclick = function () {
         document.getElementById("myModal2").style.display = "block";
       };
@@ -225,6 +231,7 @@ class Player {
     if (currentPlayerCell === grid.cells[size - 124]) {
       grid.cells[size - 124].appendChild(modal);
       modal.classList.remove("hidden");
+      document.getElementById("message").innerHTML = "Click to see a video!";
       modal.onclick = function () {
         document.getElementById("myModal3").style.display = "block";
       };
@@ -238,6 +245,7 @@ class Player {
     if (currentPlayerCell === grid.cells[size - 220]) {
       grid.cells[size - 220].appendChild(modal);
       modal.classList.remove("hidden");
+      document.getElementById("message").innerHTML = "Click to see a video!";
       modal.onclick = function () {
         document.getElementById("myModal4").style.display = "block";
       };
@@ -251,6 +259,7 @@ class Player {
     if (currentPlayerCell === grid.cells[size - 169]) {
       grid.cells[size - 169].appendChild(modal);
       modal.classList.remove("hidden");
+      document.getElementById("message").innerHTML = "Click to see a video!";
       modal.onclick = function () {
         document.getElementById("myModal5").style.display = "block";
       };
@@ -267,7 +276,8 @@ class Player {
     const currentPlayerCell = grid.cells[this.cellIndex];
 
     if (currentPlayerCell === grid.cells[size - 35]) {
-      `${this.name}` + " back to start!";
+      document.getElementById("message").innerHTML =
+        `${this.name}` + " back to start!";
       this.hide();
       this.cellIndex = 0;
       this.show();
@@ -275,7 +285,7 @@ class Player {
     }
 
     if (currentPlayerCell === grid.cells[size - 99]) {
-      document.getElementById("status").innerHTML =
+      document.getElementById("message").innerHTML =
         `${this.name}` + " back to start!";
       this.hide();
       this.cellIndex = 0;
@@ -290,7 +300,7 @@ class Player {
       currentPlayerCell === grid.cells[size - 11] ||
       currentPlayerCell === grid.cells[size - 106]
     ) {
-      document.getElementById("status").innerHTML =
+      document.getElementById("message").innerHTML =
         `${this.name}` + " back to start";
       this.hide();
       this.cellIndex = 0;
@@ -299,8 +309,8 @@ class Player {
     }
 
     if (currentPlayerCell === grid.cells[size - 156]) {
-      document.getElementById("status").innerHTML =
-        `${this.name}` + ", victory is waiting for you!";
+      document.getElementById("message").innerHTML =
+        `${this.name}` + ", victory is waiting for you (you're cell 210)!";
       this.hide();
       this.cellIndex = 210;
       this.show();
@@ -308,8 +318,8 @@ class Player {
     }
 
     if (currentPlayerCell === grid.cells[14]) {
-      document.getElementById("status").innerHTML =
-        `${this.name}` + ", victory is waiting for you!";
+      document.getElementById("message").innerHTML =
+        `${this.name}` + ", victory is waiting for you (you're cell 198)!";
       this.hide();
       this.cellIndex = 198;
       this.show();

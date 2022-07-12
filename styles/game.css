@@ -1,10 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+
 *{
  box-sizing: border-box;
+
 }
 
 body {
-  background-image: url("../images/octavian-rosca-UfCYo7zHyY8-unsplash.jpg");
+  background-image: url("../images/silhouettes-of-wedding-couple-standing-on-evening-field.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
 
 }
 
@@ -12,11 +17,11 @@ body {
 
 #players-order-title {
 
-  font-weight: 300;
-  font-family: "Roboto", sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  line-height: 1.5;
+  font-weight: lighter;
   color: white;
   font-size: 42px;
-
 }
 
 
@@ -27,15 +32,18 @@ body {
 
 .buttonStartGame {
 
-  font-size: 22px;
-  border-radius: 3px;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-weight: lighter;
+  font-size: 25px;
+  border-radius: 1px;
 }
 
 .buttonStartGame:hover {
 
+  font-weight: lighter;
   color: black;
   background-color: white;
-  font-weight: 650;
+  font-weight: 350;
   letter-spacing: 4px;
 }
 
@@ -52,7 +60,7 @@ body {
   height: 470px;
   transform: translate(2%);
   border-radius: 16px;
-  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 5px 18px rgb(255, 255, 255);
   transition: 0.5s;
 }
 
@@ -90,7 +98,6 @@ button {
   cursor: pointer;
   border-radius: 3px;
   background-color: transparent;
-
 }
 
 .alert-button:hover {
@@ -239,50 +246,62 @@ body {
 
 h2 {
   color: white;
-  font-size: 42px;
-  font-weight: 300;
-  font-family: "Roboto", sans-serif;
+  font-size: 44px;
+  font-weight: lighter;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  margin: 0%;
 }
 
 /* <-------------> DICES <-------------> */
 
 .wrapper {
-
-  width: 400px;
-  height: 280px;
-  margin: 0 auto;
+  padding-left: 50px;
+  padding-top: 10px;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .column {
   display: flex;
   align-items: center;
+  /* justify-content: space-around; */
+  flex-direction: column;
+
+}
+
+.row {
+  padding-bottom:  10px;
+  display: flex;
+}
+
+.infos {
+
+  background-color: rgba(196, 180, 180, 0.108);
+  margin: 1%;
+  padding: 20px;
+  border-radius: 5%;
+
 }
 
 
 #status {
-  position: absolute;
-  left: 50%;
-  text-shadow: #000;
-  transform: translateX(-50%);
-  min-width: 600px;
-  margin: 0;
-  font-weight: 200;
-  font-size: 30px;
+  text-shadow: black 2px 0 10px;
+  padding-top: 20px;
+  font-size: 36px;
   text-align: center;
   color: white;
-  font-family: "Roboto", sans-serif;
   background-color: transparent;
-  bottom: 68rem
-
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  line-height: 1.5;
+  font-weight: lighter;
 }
 
 .die {
-  font-family: "Roboto", sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
   width: 32px;
   color: white;
-  box-shadow: inset 0 0 0 rgba(251,81,81,0.4), 0 0 2.5em rgba(251,81,81,0.6);;
+  box-shadow: inset 0 0 0 rgba(255, 255, 255, 0.4), 0 0 2.5em rgba(251,81,81,0.6);;
   border: 2px solid white;
   padding: 10px;
   font-size: 22px;
@@ -290,12 +309,22 @@ h2 {
   border-radius: 6px;
   background-color: transparent;
   display: flex;
-  justify-content: center
+  justify-content: center;
+}
+
+.dice-roll{
+  width: 250px;
+  box-shadow: inset 0 0 0 rgba(255, 255, 255, 0.4), 0 0 2.5em rgba(251,81,81,0.6);;
+
 }
 
 .dice-roll:hover {
-	box-shadow: inset 0 0 0 rgba(251,81,81,0.4), 0 0 2.5em rgba(251,81,81,0.6);
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
   letter-spacing: 3px;
+  transform: scale(1.1, 1.1);
+  box-shadow: inset 0 0 0 rgba(255, 255, 255, 0.4), 0 0 2.5em rgba(251,81,81,0.6);;
+
+  background-color: rgba(52, 45, 45, 0.61);
 	}
 
 h3{
@@ -321,10 +350,23 @@ h3{
   flex-wrap: wrap; */
 
   display: grid;
-  grid-template-columns: repeat(15,1fr);
-  grid-template-rows: repeat(15,minmax(70px, 1fr));
+  grid-template-columns: repeat(15,55px);
+  grid-template-rows: repeat(15,48px);
+  justify-content: flex-end;
+}
+
+#message {
+
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 26px;
+
+  color: red;
+  text-shadow: black 1px 0 15px;
+  padding-bottom: 20px;
+  padding-top: 10px;
 
 }
+
 
 .cell {
   border: solid 1px rgba(246, 203, 203, 0.5);
@@ -403,19 +445,13 @@ h3{
 
 
 .player1 {
-  background-color: #fe7171;
   background-size: 100%;
-  border-radius: 50%;
   position: relative;
 
 }
 
 .player2 {
-  background-color: #d90707d3;
   background-size: 100%;
-  border-radius: 50%;
-
-
 }
 
 /* <-------------> PLAYERS <-------------> */
@@ -448,6 +484,7 @@ h3{
   color: white;
   text-align: center;
   cursor: pointer;
+  text-shadow: black 1px 0 10px;
 }
 
 .modal {
@@ -475,64 +512,87 @@ h3{
 .img-anne2 {
   background-image: url("../images/anne2small.jpg") ;
   background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 .img-alexandra2 {
   background-image: url("../images/alexandra2small.jpg") ;
   background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 .img-chatalere2 {
   background-image: url("../images/chatalere2small.jpg") ;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .img-claude2 {
   background-image: url("../images/claude2small.jpg") ;
   background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 .img-emilie2 {
   background-image: url("../images/emilie2small.jpg") ;
   background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 .img-manon2 {
   background-image: url("../images/manon2small.jpg") ;
   background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 .img-marina2 {
   background-image: url("../images/marina2small.jpg") ;
   background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 .img-orchidee2 {
   background-image: url("../images/orchidee2small.jpg") ;
   background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 .img-sarah2 {
   background-image: url("../images/sarah2small.jpg") ;
   background-repeat: no-repeat;
+  background-size: cover;
+
 
 }
 
 .img-soraya2 {
   background-image: url("../images/soraya2small.jpg") ;
   background-repeat: no-repeat;
+  background-size: cover;
+
 
 }
 
 .img-valerie2 {
   background-image: url("../images/valerie2small.jpg") ;
   background-repeat: no-repeat;
+  background-size: cover;
+
 
 }
 
 .img-victoire2 {
   background-image: url("../images/victoire2small.jpg") ;
   background-repeat: no-repeat;
+  background-size: cover;
+
 
 }
 
@@ -569,3 +629,9 @@ color: pink;
   font-family: "Roboto", sans-serif;
 
   ;}
+
+
+audio
+{
+display: none
+}
